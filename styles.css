@@ -1,0 +1,199 @@
+/* Variáveis de CSS */
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --background-color: #c0c0c0;
+    --text-color: #333;
+    --white-color: #fff;
+    --header-bg: url('../images/header-bg.jpg');
+    --transition-time: 0.3s;
+}
+
+h3 {
+    text-align: center;
+    font-size: 200px;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: #cacaca;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--header-bg) no-repeat center center/cover;
+    color: var(--white-color);
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color var(--transition-time);
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    padding: 20px;
+}
+
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--background-color);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background var(--transition-time), transform var(--transition-time);
+}
+
+.cta .btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.services {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.service {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color var(--transition-time), transform var(--transition-time), box-shadow var(--transition-time);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background var(--transition-time);
+}
+
+form button:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .cta h2 {
+        font-size: 1.5em;
+    }
+
+    .services h2 {
+        font-size: 1.5em;
+    }
+}
